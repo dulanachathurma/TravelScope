@@ -43,7 +43,7 @@
 
         /* Home Page Styles with Background Image */
         .home-page {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            background: linear-gradient(rgba(0, 0, 0, 0.245), rgba(0, 0, 0, 0.218)), 
                         url('https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
@@ -60,6 +60,247 @@
         .search-page.dark-mode {
             background: linear-gradient(135deg, #495057 0%, #6c757d 100%);
             color: #fff;
+        }
+
+        /* UPDATED: Enhanced Typing Animation Styles with LARGER FONT */
+        .typing-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(25px);
+            padding: 80px 50px;
+            border-radius: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            margin: 50px auto;
+            max-width: 1000px;
+            animation: containerGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes containerGlow {
+            0% {
+                box-shadow: 
+                    0 30px 60px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            }
+            100% {
+                box-shadow: 
+                    0 35px 70px rgba(255, 215, 0, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        .kotu-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.15) 45%, rgba(255,255,255,0.15) 55%, transparent 55%),
+                linear-gradient(-45deg, transparent 45%, rgba(255,255,255,0.15) 45%, rgba(255,255,255,0.15) 55%, transparent 55%);
+            background-size: 70px 70px;
+            opacity: 0.4;
+            z-index: -1;
+            animation: kotuMove 25s linear infinite;
+        }
+
+        @keyframes kotuMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 70px 70px;
+            }
+        }
+
+        /* UPDATED: MUCH LARGER Font Sizes for Welcome Text */
+        .welcome-text {
+            font-size: 6rem; /* Increased from 4.5rem to 6rem */
+            font-weight: 800;
+            color: white;
+            text-shadow: 
+                5px 5px 20px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(255, 215, 0, 0.6),
+                0 0 80px rgba(255, 215, 0, 0.4);
+            margin-bottom: 40px;
+            position: relative;
+            font-family: 'Dancing Script', cursive;
+            letter-spacing: 3px;
+            animation: textGlow 3s ease-in-out infinite alternate;
+            line-height: 1.2;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 
+                    5px 5px 20px rgba(0, 0, 0, 0.8),
+                    0 0 40px rgba(255, 215, 0, 0.6),
+                    0 0 80px rgba(255, 215, 0, 0.4);
+            }
+            100% {
+                text-shadow: 
+                    5px 5px 25px rgba(0, 0, 0, 0.9),
+                    0 0 50px rgba(255, 215, 0, 0.8),
+                    0 0 100px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        .typing-animation {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: none;
+            animation: typing 4.5s steps(25, end) infinite;
+            background: linear-gradient(45deg, #ffffff, var(--gold), #ffffff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: typing 4.5s steps(25, end) infinite, gradientShift 4s ease-in-out infinite;
+            font-weight: 900;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%;
+            }
+            90% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* UPDATED: Enhanced Glass Effect */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(35px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 40px;
+            box-shadow: 
+                0 20px 45px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: glassPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes glassPulse {
+            0%, 100% {
+                transform: translateY(0);
+                box-shadow: 
+                    0 20px 45px rgba(0, 0, 0, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                transform: translateY(-8px);
+                box-shadow: 
+                    0 25px 55px rgba(0, 0, 0, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        /* UPDATED: Larger Subtitle */
+        .subtitle {
+            color: white;
+            font-size: 3rem; /* Increased from 2.5rem to 3rem */
+            opacity: 1;
+            margin-top: 15px;
+            animation: subtitleGlow 2s ease-in-out infinite alternate;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            text-shadow: 
+                3px 3px 12px rgba(0, 0, 0, 0.7),
+                0 0 30px rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+
+        @keyframes subtitleGlow {
+            from {
+                opacity: 0.9;
+                text-shadow: 
+                    3px 3px 12px rgba(0, 0, 0, 0.7),
+                    0 0 30px rgba(255, 255, 255, 0.5);
+            }
+            to {
+                opacity: 1;
+                text-shadow: 
+                    3px 3px 18px rgba(0, 0, 0, 0.8),
+                    0 0 40px rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        /* UPDATED: Enhanced Floating Elements */
+        .floating-element {
+            position: absolute;
+            background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 70%);
+            border-radius: 50%;
+            animation: floatEnhanced 8s ease-in-out infinite;
+            box-shadow: 
+                0 0 25px rgba(255, 255, 255, 0.4),
+                inset 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .floating-element:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            top: 10%;
+            left: 8%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 90px;
+            height: 90px;
+            top: 75%;
+            right: 12%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 70px;
+            height: 70px;
+            bottom: 15%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatEnhanced {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg) scale(1);
+                opacity: 0.7;
+            }
+            25% {
+                transform: translateY(-30px) rotate(90deg) scale(1.1);
+                opacity: 0.9;
+            }
+            50% {
+                transform: translateY(-50px) rotate(180deg) scale(1.2);
+                opacity: 1;
+            }
+            75% {
+                transform: translateY(-30px) rotate(270deg) scale(1.1);
+                opacity: 0.9;
+            }
         }
 
         /* Snow Effect */
@@ -688,7 +929,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid var(--gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.195);
             margin-bottom: 20px;
             transition: all 0.4s ease;
             background: rgba(255, 255, 255, 0.1);
@@ -700,7 +941,7 @@
 
         .profile-circle:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.322);
             border-color: white;
         }
 
@@ -726,7 +967,7 @@
             font-size: 1.4rem;
             color: white;
             font-family: 'Times New Roman', Times, serif;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
             margin-bottom: 20px;
         }
 
@@ -1166,243 +1407,72 @@
             transform: translateX(26px);
         }
 
-        /* Responsive Design */
+        /* Responsive Design for Typing Animation */
         @media (max-width: 1024px) {
-            .header {
-                padding: 20px 20px 20px 100px;
-                flex-direction: column;
-                gap: 25px;
-            }
-
-            .places-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            }
-
-            .container {
-                padding: 40px 20px 40px 100px;
-            }
-            
-            .welcome-section {
-                padding: 80px 40px;
-                min-height: 500px;
-            }
-            
-            .welcome-title {
-                font-size: 3rem;
-            }
-            
-            .discover-text {
-                font-size: 2rem;
-            }
-            
             .welcome-text {
-                font-size: 1.5rem;
+                font-size: 5rem;
             }
             
-            .profile-circle {
-                width: 220px;  /* Adjusted for responsive */
-                height: 220px; /* Adjusted for responsive */
+            .subtitle {
+                font-size: 2.5rem;
             }
             
-            .profile-name {
-                font-size: 2rem;
-            }
-            
-            .profile-tagline {
-                font-size: 1.3rem;
+            .typing-container {
+                padding: 70px 45px;
+                margin: 45px 25px;
             }
         }
 
         @media (max-width: 768px) {
-            .sidebar {
-                width: 60px;
-            }
-            
-            .sidebar:hover {
-                width: 180px;
-            }
-            
-            .header {
-                padding: 20px 20px 20px 90px;
-            }
-            
-            .container {
-                padding: 40px 15px 40px 90px;
-            }
-
-            .controls {
-                grid-template-columns: 1fr;
-            }
-
-            .dropdown {
-                height: 65px;
-            }
-
-            .places-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-content {
-                padding: 30px;
-                width: 98vw;
-            }
-
-            .map-container {
-                height: 450px;
-            }
-
-            .welcome-section {
-                padding: 60px 25px;
-                min-height: 400px;
-            }
-
-            .welcome-title {
-                font-size: 2.5rem;
-            }
-
-            .discover-text {
-                font-size: 1.8rem;
-            }
-
             .welcome-text {
-                font-size: 1.2rem;
-            }
-
-            .travelscope-logo {
-                font-size: 2.2rem;
+                font-size: 3.8rem;
             }
             
-            .vehicle-logos {
-                gap: 20px;
+            .subtitle {
+                font-size: 2rem;
             }
             
-            .vehicle-logo {
-                width: 60px;
-                height: 60px;
+            .typing-container {
+                padding: 50px 35px;
+                margin: 35px 20px;
             }
             
-            .vehicle-icon {
-                font-size: 1.5rem;
-            }
-            
-            .carousel-container {
-                height: 300px;
-            }
-            
-            .profile-circle {
-                width: 180px;  /* Adjusted for responsive */
-                height: 180px; /* Adjusted for responsive */
-            }
-            
-            .profile-name {
-                font-size: 1.8rem;
-            }
-            
-            .profile-tagline {
-                font-size: 1.2rem;
-            }
-            
-            .uploaded-images {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            .glass-effect {
+                padding: 25px;
             }
         }
 
         @media (max-width: 480px) {
-            .sidebar {
-                width: 50px;
+            .welcome-text {
+                font-size: 2.8rem;
             }
             
-            .sidebar:hover {
-                width: 160px;
+            .subtitle {
+                font-size: 1.6rem;
             }
             
-            .header {
-                padding: 15px 15px 15px 70px;
+            .typing-container {
+                padding: 40px 25px;
+                margin: 30px 15px;
             }
             
-            .container {
-                padding: 20px 10px 20px 70px;
+            .glass-effect {
+                padding: 20px;
             }
-
-            .controls-section {
-                padding: 30px 20px;
+            
+            .floating-element:nth-child(1) {
+                width: 80px;
+                height: 80px;
             }
-
-            .travelscope-logo {
-                font-size: 1.8rem;
-            }
-
-            .dropdown {
-                padding: 18px 20px;
+            
+            .floating-element:nth-child(2) {
+                width: 60px;
                 height: 60px;
             }
-
-            .map-container {
-                height: 350px;
-            }
-
-            .search-btn {
-                padding: 18px 40px;
-                font-size: 1.2rem;
-            }
-
-            .welcome-section {
-                padding: 40px 20px;
-                min-height: 350px;
-            }
-
-            .welcome-title {
-                font-size: 2rem;
-            }
-
-            .discover-text {
-                font-size: 1.5rem;
-            }
-
-            .welcome-text {
-                font-size: 1rem;
-            }
             
-            .vehicle-logos {
-                gap: 15px;
-            }
-            
-            .vehicle-logo {
+            .floating-element:nth-child(3) {
                 width: 50px;
                 height: 50px;
-            }
-            
-            .vehicle-icon {
-                font-size: 1.2rem;
-            }
-            
-            .carousel-container {
-                height: 250px;
-            }
-            
-            .carousel-title {
-                font-size: 2rem;
-            }
-            
-            .datetime-display {
-                font-size: 1rem;
-            }
-            
-            .profile-circle {
-                width: 150px;  /* Adjusted for responsive */
-                height: 150px; /* Adjusted for responsive */
-            }
-            
-            .profile-name {
-                font-size: 1.5rem;
-            }
-            
-            .profile-tagline {
-                font-size: 1rem;
-            }
-            
-            .uploaded-images {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -2503,6 +2573,22 @@
                 }
             }, []);
 
+            // Typing animation effect
+            useEffect(() => {
+                const typingElement = document.querySelector('.typing-animation');
+                if (typingElement) {
+                    // Ensure continuous animation
+                    const interval = setInterval(() => {
+                        typingElement.style.animation = 'none';
+                        setTimeout(() => {
+                            typingElement.style.animation = 'typing 4.5s steps(25, end) infinite, gradientShift 4s ease-in-out infinite';
+                        }, 10);
+                    }, 4500);
+                    
+                    return () => clearInterval(interval);
+                }
+            }, []);
+
             // Handle province selection
             const handleProvinceChange = (e) => {
                 setSelectedProvince(e.target.value);
@@ -2651,6 +2737,23 @@
                         {/* Welcome Section - Home Page Only */}
                         {currentPage === 'home' && !showSearchResults && (
                             <>
+                                {/* UPDATED: Enhanced Typing Animation Section with LARGER FONT */}
+                                <div className="typing-container">
+                                    <div className="kotu-background"></div>
+                                    
+                                    <div className="floating-element"></div>
+                                    <div className="floating-element"></div>
+                                    <div className="floating-element"></div>
+                                    
+                                    <h1 className="welcome-text">
+                                        <span className="typing-animation">Welcome to Sri Lanka</span>
+                                    </h1>
+                                    
+                                    <div className="glass-effect">
+                                        <p className="subtitle">The Pearl of the Indian Ocean</p>
+                                    </div>
+                                </div>
+
                                 <div className="welcome-section">
                                     {/* Profile Section with Circular Image - UPDATED SIZE */}
                                     <div className="profile-section">
