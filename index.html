@@ -119,7 +119,7 @@
 
         /* UPDATED: MUCH LARGER Font Sizes for Welcome Text */
         .welcome-text {
-            font-size: 6rem; /* Increased from 4.5rem to 6rem */
+            font-size: 6rem;
             font-weight: 800;
             color: white;
             text-shadow: 
@@ -221,7 +221,7 @@
         /* UPDATED: Larger Subtitle */
         .subtitle {
             color: white;
-            font-size: 3rem; /* Increased from 2.5rem to 3rem */
+            font-size: 3rem;
             opacity: 1;
             margin-top: 15px;
             animation: subtitleGlow 2s ease-in-out infinite alternate;
@@ -924,8 +924,8 @@
         }
 
         .profile-circle {
-            width: 280px;  /* Increased from 200px */
-            height: 280px; /* Increased from 200px */
+            width: 280px;
+            height: 280px;
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid var(--gold);
@@ -1407,10 +1407,26 @@
             transform: translateX(26px);
         }
 
-        /* Responsive Design for Typing Animation */
+        /* ============================
+           MOBILE RESPONSIVE UPDATES
+           ============================ */
+
+        /* Large Tablets */
         @media (max-width: 1024px) {
+            .sidebar {
+                width: 60px;
+            }
+            
+            .container {
+                padding: 30px 20px 30px 90px;
+            }
+            
+            .header {
+                padding: 20px 30px 20px 90px;
+            }
+            
             .welcome-text {
-                font-size: 5rem;
+                font-size: 4.5rem;
             }
             
             .subtitle {
@@ -1418,48 +1434,300 @@
             }
             
             .typing-container {
-                padding: 70px 45px;
-                margin: 45px 25px;
+                padding: 60px 40px;
+                margin: 40px 20px;
+            }
+            
+            .controls-section {
+                padding: 40px 30px;
+            }
+            
+            .places-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 30px;
+            }
+            
+            .carousel-container {
+                height: 350px;
+            }
+            
+            .profile-circle {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .profile-name {
+                font-size: 2rem;
             }
         }
 
+        /* Tablets and Small Laptops */
         @media (max-width: 768px) {
+            .sidebar {
+                width: 50px;
+                padding-top: 80px;
+            }
+            
+            .sidebar:hover {
+                width: 180px;
+            }
+            
+            .sidebar-btn {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+            
+            .sidebar-btn-icon {
+                font-size: 1.2rem;
+                min-width: 25px;
+            }
+            
+            .header {
+                padding: 15px 20px 15px 80px;
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .travelscope-logo {
+                font-size: 2.2rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .container {
+                padding: 20px 15px 20px 80px;
+            }
+            
+            /* Typing Animation Adjustments */
+            .typing-container {
+                padding: 40px 25px;
+                margin: 30px 15px;
+            }
+            
             .welcome-text {
-                font-size: 3.8rem;
+                font-size: 3.2rem;
+                line-height: 1.3;
             }
             
             .subtitle {
                 font-size: 2rem;
             }
             
-            .typing-container {
-                padding: 50px 35px;
-                margin: 35px 20px;
-            }
-            
             .glass-effect {
                 padding: 25px;
+                margin-top: 30px;
             }
-        }
-
-        @media (max-width: 480px) {
+            
+            /* Controls Section */
+            .controls-section {
+                padding: 30px 20px;
+                border-radius: 25px;
+            }
+            
+            .controls {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .dropdown {
+                padding: 15px 20px;
+                height: 60px;
+                font-size: 1.1rem;
+                border-radius: 18px;
+            }
+            
+            .dropdown-label {
+                font-size: 1.2rem;
+            }
+            
+            .search-btn {
+                padding: 18px 40px;
+                font-size: 1.2rem;
+                border-radius: 20px;
+            }
+            
+            /* Welcome Section */
+            .welcome-section {
+                padding: 80px 30px;
+                min-height: 500px;
+            }
+            
             .welcome-text {
-                font-size: 2.8rem;
+                font-size: 1.5rem;
+                padding: 0 10px;
             }
             
-            .subtitle {
-                font-size: 1.6rem;
+            .datetime-display {
+                font-size: 1rem;
+                padding: 6px 12px;
             }
             
-            .typing-container {
-                padding: 40px 25px;
-                margin: 30px 15px;
+            /* Profile Section */
+            .profile-circle {
+                width: 180px;
+                height: 180px;
             }
             
-            .glass-effect {
+            .profile-name {
+                font-size: 1.8rem;
+            }
+            
+            .profile-tagline {
+                font-size: 1.2rem;
+            }
+            
+            /* Vehicle Logos */
+            .vehicle-logos {
+                gap: 20px;
+            }
+            
+            .vehicle-logo {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .vehicle-icon {
+                font-size: 1.8rem;
+            }
+            
+            /* Photo Carousel */
+            .photo-carousel {
+                padding: 30px 20px;
+            }
+            
+            .carousel-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .carousel-container {
+                height: 300px;
+            }
+            
+            .carousel-caption {
+                font-size: 1.1rem;
+                padding: 15px;
+            }
+            
+            /* Upload Section */
+            .upload-section {
+                padding: 30px 20px;
+            }
+            
+            .upload-title {
+                font-size: 2rem;
+            }
+            
+            .upload-area {
+                padding: 30px 20px;
+            }
+            
+            .upload-icon {
+                font-size: 3rem;
+            }
+            
+            .upload-text {
+                font-size: 1.1rem;
+            }
+            
+            .uploaded-images {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .uploaded-image {
+                height: 180px;
+            }
+            
+            /* Places Grid */
+            .places-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 25px;
+            }
+            
+            .place-card {
+                margin-bottom: 10px;
+            }
+            
+            .place-image {
+                height: 240px;
+            }
+            
+            .place-content {
                 padding: 20px;
             }
             
+            .place-name {
+                font-size: 1.4rem;
+            }
+            
+            .place-description {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+                margin-bottom: 30px;
+            }
+            
+            /* Footer */
+            .footer {
+                padding: 50px 20px;
+                margin-top: 70px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .contact-item {
+                padding: 25px;
+            }
+            
+            .contact-label {
+                font-size: 1.2rem;
+            }
+            
+            .contact-detail {
+                font-size: 1rem;
+            }
+            
+            /* Modal */
+            .modal-content {
+                padding: 30px 20px;
+                width: 95vw;
+                max-height: 90vh;
+            }
+            
+            .modal-title {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+            
+            .modal-close {
+                top: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+                font-size: 2rem;
+            }
+            
+            /* Floating Elements */
             .floating-element:nth-child(1) {
                 width: 80px;
                 height: 80px;
@@ -1473,6 +1741,401 @@
             .floating-element:nth-child(3) {
                 width: 50px;
                 height: 50px;
+            }
+        }
+
+        /* Mobile Phones */
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 45px;
+                padding-top: 70px;
+            }
+            
+            .sidebar-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+            
+            .sidebar:hover {
+                width: 160px;
+            }
+            
+            .header {
+                padding: 12px 15px 12px 70px;
+                gap: 10px;
+            }
+            
+            .travelscope-logo {
+                font-size: 1.8rem;
+            }
+            
+            .social-links {
+                gap: 10px;
+            }
+            
+            .social-link {
+                padding: 8px;
+            }
+            
+            .youtube-logo {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .whatsapp-logo, .facebook-logo {
+                width: 28px;
+                height: 28px;
+            }
+            
+            .container {
+                padding: 15px 10px 15px 70px;
+            }
+            
+            /* Typing Animation */
+            .typing-container {
+                padding: 30px 20px;
+                margin: 20px 10px;
+                border-radius: 20px;
+            }
+            
+            .welcome-text {
+                font-size: 2.5rem;
+                margin-bottom: 25px;
+            }
+            
+            .subtitle {
+                font-size: 1.6rem;
+            }
+            
+            .glass-effect {
+                padding: 20px;
+                margin-top: 20px;
+                border-radius: 20px;
+            }
+            
+            /* Controls Section */
+            .controls-section {
+                padding: 25px 15px;
+                border-radius: 20px;
+                margin-bottom: 30px;
+            }
+            
+            .dropdown {
+                padding: 12px 15px;
+                height: 55px;
+                font-size: 1rem;
+                border-radius: 15px;
+            }
+            
+            .dropdown-label {
+                font-size: 1.1rem;
+            }
+            
+            .theme-toggle {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .theme-toggle-switch {
+                width: 50px;
+                height: 28px;
+            }
+            
+            .theme-toggle-switch input:checked + .theme-toggle-slider:before {
+                transform: translateX(22px);
+            }
+            
+            .search-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+                border-radius: 18px;
+            }
+            
+            /* Welcome Section */
+            .welcome-section {
+                padding: 60px 20px;
+                min-height: 400px;
+                border-radius: 25px;
+            }
+            
+            .welcome-text {
+                font-size: 1.3rem;
+                margin-bottom: 30px;
+            }
+            
+            .datetime-display {
+                font-size: 0.9rem;
+                padding: 5px 10px;
+            }
+            
+            /* Profile Section */
+            .profile-section {
+                margin: 30px 0;
+            }
+            
+            .profile-circle {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .profile-name {
+                font-size: 1.5rem;
+            }
+            
+            .profile-tagline {
+                font-size: 1.1rem;
+            }
+            
+            /* Vehicle Logos */
+            .vehicle-logos {
+                gap: 15px;
+                margin: 20px 0;
+            }
+            
+            .vehicle-logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .vehicle-icon {
+                font-size: 1.5rem;
+            }
+            
+            /* Photo Carousel */
+            .photo-carousel {
+                padding: 25px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .carousel-title {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+            
+            .carousel-container {
+                height: 250px;
+            }
+            
+            .carousel-caption {
+                font-size: 1rem;
+                padding: 12px;
+            }
+            
+            .carousel-dot {
+                width: 12px;
+                height: 12px;
+            }
+            
+            /* Upload Section */
+            .upload-section {
+                padding: 25px 15px;
+                margin-bottom: 30px;
+            }
+            
+            .upload-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            
+            .upload-instructions {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            
+            .upload-area {
+                padding: 25px 15px;
+            }
+            
+            .upload-icon {
+                font-size: 2.5rem;
+            }
+            
+            .upload-text {
+                font-size: 1rem;
+            }
+            
+            .upload-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .uploaded-images {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .uploaded-image {
+                height: 160px;
+            }
+            
+            /* Places Grid */
+            .places-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .place-image {
+                height: 220px;
+            }
+            
+            .place-content {
+                padding: 15px;
+            }
+            
+            .place-name {
+                font-size: 1.3rem;
+            }
+            
+            .place-description {
+                font-size: 0.95rem;
+            }
+            
+            .view-location-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+            
+            /* Footer */
+            .footer {
+                padding: 40px 15px;
+                margin-top: 50px;
+            }
+            
+            .contact-item {
+                padding: 20px;
+            }
+            
+            .contact-label {
+                font-size: 1.1rem;
+            }
+            
+            .copyright {
+                font-size: 1rem;
+                margin-top: 30px;
+                padding-top: 20px;
+            }
+            
+            .witty-text {
+                font-size: 1rem;
+            }
+            
+            /* Modal */
+            .modal-overlay {
+                padding: 10px;
+            }
+            
+            .modal-content {
+                padding: 25px 15px;
+                border-radius: 20px;
+            }
+            
+            .modal-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            
+            .map-container {
+                height: 300px;
+            }
+            
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.8rem;
+            }
+            
+            /* No Places Message */
+            .no-places {
+                padding: 40px 20px;
+                font-size: 1.2rem;
+            }
+            
+            /* Floating Elements Hide on Mobile */
+            .floating-element {
+                display: none;
+            }
+        }
+
+        /* Very Small Phones */
+        @media (max-width: 360px) {
+            .sidebar {
+                width: 40px;
+            }
+            
+            .container {
+                padding: 10px 5px 10px 60px;
+            }
+            
+            .header {
+                padding: 10px 10px 10px 60px;
+            }
+            
+            .travelscope-logo {
+                font-size: 1.6rem;
+            }
+            
+            .welcome-text {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-circle {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .profile-name {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Landscape Mode for Mobile */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .sidebar {
+                padding-top: 60px;
+            }
+            
+            .welcome-section {
+                min-height: auto;
+                padding: 40px 20px;
+            }
+            
+            .profile-circle {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 10px;
+            }
+            
+            .profile-name {
+                font-size: 1.3rem;
+            }
+            
+            .carousel-container {
+                height: 200px;
+            }
+            
+            .places-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .place-image {
+                height: 180px;
             }
         }
 
@@ -1495,6 +2158,52 @@
 
         .search-page.dark-mode .no-places {
             background: rgba(108, 117, 125, 0.9);
+        }
+
+        /* Touch Device Improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .sidebar:hover {
+                width: 70px;
+            }
+            
+            .sidebar:hover .sidebar-nav {
+                opacity: 0;
+            }
+            
+            /* Show sidebar nav on mobile tap */
+            .sidebar.active {
+                width: 200px;
+            }
+            
+            .sidebar.active .sidebar-nav {
+                opacity: 1;
+            }
+            
+            /* Remove hover effects for touch */
+            .place-card:hover {
+                transform: none;
+            }
+            
+            .social-link:hover,
+            .vehicle-logo:hover,
+            .contact-item:hover {
+                transform: none;
+            }
+            
+            .dropdown:hover,
+            .search-btn:hover,
+            .theme-toggle:hover,
+            .view-location-btn:hover {
+                transform: none;
+            }
+            
+            /* Add active states for touch */
+            .sidebar-btn:active,
+            .search-btn:active,
+            .theme-toggle:active,
+            .view-location-btn:active {
+                transform: scale(0.95);
+            }
         }
     </style>
 </head>
@@ -1520,6 +2229,7 @@
             const [currentSlide, setCurrentSlide] = useState(0);
             const [currentTime, setCurrentTime] = useState(new Date());
             const [uploadedImages, setUploadedImages] = useState([]);
+            const [sidebarActive, setSidebarActive] = useState(false);
 
             // Enhanced Carousel images data with new naming structure
             const carouselImages = [
@@ -2637,6 +3347,7 @@
                 setSelectedProvince('');
                 setSelectedDistrict('');
                 setPlaces([]);
+                setSidebarActive(false);
             };
 
             // Handle logo click - Open Gmail
@@ -2647,6 +3358,11 @@
             // Handle train logo click - Open railway timetable
             const handleTrainClick = () => {
                 window.open('https://www.railway.gov.lk/web/index.php?lang=en', '_blank');
+            };
+
+            // Handle sidebar toggle for mobile
+            const handleSidebarToggle = () => {
+                setSidebarActive(!sidebarActive);
             };
 
             // Get districts for selected province
@@ -2681,14 +3397,19 @@
                 document.getElementById('image-upload').click();
             };
 
+            // Check if mobile device
+            const isMobile = () => {
+                return window.innerWidth <= 768;
+            };
+
             return (
                 <div className={`app ${currentPage === 'home' ? 'home-page' : 'search-page'} ${darkMode ? 'dark-mode' : ''}`}>
                     {/* Background Overlay */}
                     <div className="background-overlay"></div>
                     
                     {/* Sidebar Navigation */}
-                    <div className="sidebar">
-                        <button className="sidebar-toggle">→</button>
+                    <div className={`sidebar ${sidebarActive ? 'active' : ''}`} onClick={isMobile() ? handleSidebarToggle : null}>
+                        <button className="sidebar-toggle" onClick={isMobile() ? handleSidebarToggle : null}>→</button>
                         <div className="sidebar-nav">
                             <button 
                                 className={`sidebar-btn ${currentPage === 'home' ? 'active' : ''}`}
@@ -2737,7 +3458,7 @@
                         {/* Welcome Section - Home Page Only */}
                         {currentPage === 'home' && !showSearchResults && (
                             <>
-                                {/* UPDATED: Enhanced Typing Animation Section with LARGER FONT */}
+                                {/* Enhanced Typing Animation Section */}
                                 <div className="typing-container">
                                     <div className="kotu-background"></div>
                                     
@@ -2755,13 +3476,17 @@
                                 </div>
 
                                 <div className="welcome-section">
-                                    {/* Profile Section with Circular Image - UPDATED SIZE */}
+                                    {/* Profile Section with Circular Image */}
                                     <div className="profile-section">
                                         <div className="profile-circle">
                                             <img 
                                                 src="images/profile/profile_dulana.jpg" 
                                                 alt="Travel with Dulana"
                                                 className="profile-image"
+                                                onError={(e) => {
+                                                    e.target.onerror = null;
+                                                    e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80";
+                                                }}
                                             />
                                         </div>
                                         <h2 className="profile-name">Travel with Dulana</h2>
@@ -2935,6 +3660,10 @@
                                                     alt={place.name}
                                                     className="place-image"
                                                     loading="lazy"
+                                                    onError={(e) => {
+                                                        e.target.onerror = null;
+                                                        e.target.src = "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80";
+                                                    }}
                                                 />
                                                 <div className="place-content">
                                                     <h3 className="place-name">{place.name}</h3>
